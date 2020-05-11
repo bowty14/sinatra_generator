@@ -15,6 +15,7 @@ class Project
     FileUtils.touch "../#{@project_name}/lib/#{@project_name}.rb"
     FileUtils.touch "../#{@project_name}/spec/#{@project_name}_spec.rb" 
     FileUtils.touch "../#{@project_name}/spec/#{@project_name}_integration_spec.rb" 
+    FileUtils.touch "../#{@project_name}/views/layout.erb"
     File.open("../#{@project_name}/Gemfile", 'a') {|f| f.write(
       "source 'https://rubygems.org' " +
       "\n" + 
