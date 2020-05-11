@@ -30,6 +30,8 @@ class Project
       "require('sinatra') " +
       "\n" +
       "require('sinatra/reloader') " +
+      "\n" +
+      "require('./lib/#{@project_name}.rb')" +
       "\n"+
       "also_reload('lib/**/*.rb') " ) }
       File.open("../#{@project_name}/script.rb", 'a') {|f| f.write("#!/usr/bin/env/ ruby" +
